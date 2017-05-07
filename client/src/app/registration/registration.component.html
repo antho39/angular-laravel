@@ -1,0 +1,41 @@
+<h2>Création de compte</h2>
+
+<form  [formGroup]="registrationForm" method="post" novalidate>
+    <div class="form-content">
+        <label>
+            Nom:
+            <input type="text" formControlName="familyname" class="sd-form-control" placeholder="Entrez votre nom.">
+        </label>
+        <label>
+            Prénom:
+            <input type="text" formControlName="firstname" class="sd-form-control" placeholder="Entrez votre prénom.">
+        </label>
+        <label>
+            Email:
+            <input type="email" formControlName="email" class="sd-form-control" placeholder="Enter your email.">
+        </label>
+        <label>
+            Mot de passe:
+            <input type="password" formControlName="password" class="sd-form-control" placeholder="Entrez votre mot de passe.">
+        </label>
+        <label>
+            Confirmer mot de passe:
+            <input type="password" formControlName="confirmPassword" class="sd-form-control" placeholder="Confirmez votre mot de passe.">
+        </label>
+
+        <div class="form-submit">
+            <button (click)="onSubmit(registrationForm.value)">Enregistrer</button>
+        </div>
+    </div>
+</form>
+
+<div class="form-value">
+    <button (click)="submitForm()">test</button>
+    <pre>
+        {{ responseData }}
+    </pre>
+    <pre>
+        {{ getData }}
+    </pre>
+</div>
+

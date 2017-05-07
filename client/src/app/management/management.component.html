@@ -1,0 +1,74 @@
+<style>
+
+    header, main, footer {
+        padding-left: 300px;
+    }
+    @media only screen and (max-width : 992px) {
+        header, main, footer {
+            padding-left: 0;
+        }
+    }
+
+</style>
+<ul id="slide-out" class="side-nav fixed">
+	<li><a href="#!">
+		<span class="mif-home icon"></span>
+		<span class="title">Tableau de bord</span>
+	</a></li>
+	<li><a href="#!">
+		<span class="mif-eur icon"></span>
+		<span class="title">Plan d'amortissement</span>
+	</a></li>
+	<li><a href="#!">
+		<span class="mif-users icon"></span>
+		<span class="title">Clients</span>
+		<span class="counter">{{ $clients }}</span>
+	</a></li>
+	<li><a href="#!">
+		<span class="mif-shopping-basket2 icon"></span>
+		<span class="title">Articles</span>
+		<span class="counter">{{ $articles }}</span>
+	</a></li>
+	<li><a href="#!">
+		<span class="mif-file-text icon"></span>
+		<span class="title">Factures</span>
+	</a></li>
+	<li><a href="#!">
+		<span class="mif-file-text icon"></span>
+		<span class="title">Devis</span>
+	</a></li>
+	<li><a href="#!">
+		<span class="mif-vpn-publ icon"></span>
+		<span class="title">Site Web</span>
+	</a></li>
+
+	<li class="no-padding">
+		<ul class="collapsible collapsible-accordion">
+			<li>
+				<a class="collapsible-header">Dropdown</a>
+				<div class="collapsible-body">
+					<ul>
+						<li><a href="#!">First</a></li>
+						<li><a href="#!">Second</a></li>
+						<li><a href="#!">Third</a></li>
+						<li><a href="#!">Fourth</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</li><li><a href="#!"></a></li>
+</ul>
+
+<router-outlet></router-outlet>
+
+<script>
+    $(document).ready(function(){
+        setTimeout(function(){
+            $('main#block').css('padding-left', 300);
+            $('footer').css('padding-left', 300);
+            $('header').css('padding-left', 300);
+
+        }, 10000);
+
+    });
+</script>
